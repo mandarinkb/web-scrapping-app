@@ -1,0 +1,7 @@
+{
+  "name": "web-scrapping-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,45 @@
+    <ion-menu side="start">
+      <ion-header>
+        <ion-toolbar color="secondary" translucent>
+          <ion-title>ลีก</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item (click)="onClick('thaipremierleague')">
+              <ion-thumbnail item-left>
+                  <img src="assets/img/chonburi.png">
+              </ion-thumbnail>
+            <ion-label style="margin-left: 15px;">ไทยลีก</ion-label>
+          </ion-item>
+          <ion-item (click)="onClick('premierleague')">
+              <ion-thumbnail item-left>
+                  <img src="assets/img/chonburi.png">
+              </ion-thumbnail>
+            <ion-label style="margin-left: 15px;">พรีเมียร์ลีก</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <div class="ion-page" main>
+      <ion-header>
+        <ion-toolbar color="secondary">
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title style="text-align: center;">
+              โปรแกรมแข่งขัน
+          </ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+          <div *ngIf = "league ; then thtag else pretag"></div>
+          <ng-template #thtag>
+              <ion-label>ไทยลีก</ion-label>
+          </ng-template>
+          <ng-template #pretag>
+              <ion-label>พรีเมียร์ลีก</ion-label>
+          </ng-template>
+      </ion-content>
+    </div>

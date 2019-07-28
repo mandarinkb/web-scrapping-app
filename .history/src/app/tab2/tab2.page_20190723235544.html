@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">
+      ผลบอล
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-item lines="none">
+    <ion-label></ion-label>
+    <ion-select name="periodSelected" (ionChange)="onChange($event)" okText="ตกลง" cancelText="ยกเลิก">
+      <ion-select-option value="1" selected >ไทยลีก</ion-select-option>
+      <ion-select-option value="2">พรีเมียร์ลีก อังกฤษ</ion-select-option>
+    </ion-select>
+</ion-item>
+
+<ion-content>
+    <!--<div *ngIf = "leage ; then thtag else pretag"></div>
+    <ng-template #thtag>
+    <ion-list lines="none">
+      <ion-item [routerLink]="['/results']" detail>
+        <ion-icon slot="start" color="medium" name="football"></ion-icon>
+        <ion-label>กุมภาพันธ์</ion-label>
+      </ion-item>
+      <ion-item [routerLink]="['/results']" detail>
+        <ion-icon slot="start" color="medium" name="football"></ion-icon>
+        <ion-label>มีนาคม</ion-label>
+      </ion-item>
+    </ion-list>
+  </ng-template>
+  <ng-template #pretag>
+      <ion-list lines="none">
+        <ion-item [routerLink]="['/results']" detail>
+          <ion-icon slot="start" color="medium" name="football"></ion-icon>
+          <ion-label>สิงหาคม</ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/results']" detail>
+          <ion-icon slot="start" color="medium" name="football"></ion-icon>
+          <ion-label>กันยายน</ion-label>
+        </ion-item>
+      </ion-list>
+  </ng-template>-->
+  
+
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="schedule">
+      <ion-icon name="calendar"></ion-icon>
+      <ion-label>Schedule</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="speakers">
+      <ion-icon name="contacts"></ion-icon>
+      <ion-label>Speakers</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="map">
+      <ion-icon name="map"></ion-icon>
+      <ion-label>Map</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="about">
+      <ion-icon name="information-circle"></ion-icon>
+      <ion-label>About</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>
+
+
+</ion-content>

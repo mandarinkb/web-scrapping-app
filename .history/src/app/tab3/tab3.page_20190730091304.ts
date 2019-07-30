@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class Tab3Page {
 
   constructor() {}
-  onChoose($event) {
+  onChange($event) {
     console.log($event.target.value);
   }
 }

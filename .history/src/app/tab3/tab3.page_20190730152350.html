@@ -1,0 +1,49 @@
+
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title style="text-align: center;">
+      ตารางคะแนน
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment color="success" (ionChange)="onChoose($event)">
+    <ion-segment-button checked layout="icon-start" value="all" style="border-radius: 0px;">
+      <ion-icon name="grid"></ion-icon>
+      <ion-label>ตารางคะแนนรวม</ion-label>
+    </ion-segment-button>
+    <ion-segment-button layout="icon-start" value="home" style="border-radius: 0px;">
+      <ion-icon name="arrow-dropright"></ion-icon>
+      <ion-label>เจ้าบ้าน</ion-label>
+    </ion-segment-button>
+    <ion-segment-button layout="icon-start" value="away" style="border-radius: 0px;">
+      <ion-icon name="arrow-dropleft"></ion-icon>
+      <ion-label>ทีมเยือน</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-row style="border-bottom: groove;">
+    <ion-col size="1">
+    <ion-label style="font-size: 9px;">อันดับ</ion-label>
+  </ion-col>
+  <ion-col size="5">
+    <ion-label >header</ion-label>
+  </ion-col>
+    <ion-col col-4>
+    <ion-label >header</ion-label>
+  </ion-col>
+</ion-row>
+<ion-row style="border-bottom: groove;">
+    <ion-col size="1">
+    <ion-label >1</ion-label>
+  </ion-col>
+  <ion-col col-4>
+    <ion-label >02/02/2018</ion-label>
+  </ion-col>
+    <ion-col col-4>
+    <ion-label >1</ion-label>
+  </ion-col>
+</ion-row>
+  
+</ion-content>

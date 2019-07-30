@@ -1,0 +1,47 @@
+
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title style="text-align: center;">
+      ตารางคะแนน
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment color="success" (ionChange)="onChoose($event)">
+    <ion-segment-button checked layout="icon-start" value="all" style="border-radius: 0px;">
+      <ion-icon name="grid"></ion-icon>
+      <ion-label>ตารางคะแนนรวม</ion-label>
+    </ion-segment-button>
+    <ion-segment-button layout="icon-start" value="home" style="border-radius: 0px;">
+      <ion-icon name="arrow-dropright"></ion-icon>
+      <ion-label>เจ้าบ้าน</ion-label>
+    </ion-segment-button>
+    <ion-segment-button layout="icon-start" value="away" style="border-radius: 0px;">
+      <ion-icon name="arrow-dropleft"></ion-icon>
+      <ion-label>ทีมเยือน</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-content>
+        <div class="row header">
+          <div class="col">Utility Company Name</div>
+          <div class="col">Service Code</div>
+          <div class="col">Pay Limit</div>
+          <div class="col">Account Number to Use</div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col">data</div>
+          <div class="col">data</div>
+          <div class="col">data</div>
+          <div class="col">data</div>
+          <div class="col">data<button class="button">Add</button></div>
+        </div>
+    </ion-content>
+    </ion-col>
+  </ion-row>
+  
+</ion-content>

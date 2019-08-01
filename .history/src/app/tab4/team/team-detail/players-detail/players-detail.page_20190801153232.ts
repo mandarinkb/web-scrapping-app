@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Chart } from 'chart.js';
-import { ACTIVE_INDEX } from '@angular/core/src/render3/interfaces/container';
 @Component({
   selector: 'app-players-detail',
   templateUrl: './players-detail.page.html',
@@ -11,10 +10,6 @@ export class PlayersDetailPage implements OnInit {
   @ViewChild('lineCanvas') lineCanvas;
   lineChart: any;
 
-  inputLabel = ['2019', '2018', '2017', '2016', '2015', '2014'];
-  inputData = [9.32, 7.61, 8.03, 7.58, 8.23, 7.17];
-
-  labelName = 'ฟอร์มการเล่นแต่ละฤดูกาล';
   img = 'assets/img/Prasit_Padungchok.jpg';
   player: string;
   constructor(private route: ActivatedRoute) {
@@ -25,15 +20,14 @@ export class PlayersDetailPage implements OnInit {
   ngOnInit() {
     this.lineChartMethod();
   }
-
   lineChartMethod() {
     this.lineChart = new Chart(this.lineCanvas.nativeElement, {
       type: 'line',
       data: {
-        labels: this.inputLabel,
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'November', 'December'],
         datasets: [
           {
-            label: this.labelName,
+            label: 'Sell per week',
             fill: false,
             lineTension: 0.1,
             backgroundColor: 'rgba(75,192,192,0.4)',
@@ -51,7 +45,7 @@ export class PlayersDetailPage implements OnInit {
             pointHoverBorderWidth: 2,
             pointRadius: 1,
             pointHitRadius: 10,
-            data: this.inputData,
+            data: [65, 59, 80, 81, 56, 55, 40, 10, 5, 50, 10, 15],
             spanGaps: false,
           }
         ]

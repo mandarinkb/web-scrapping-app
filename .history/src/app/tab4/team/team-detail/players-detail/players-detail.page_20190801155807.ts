@@ -12,7 +12,7 @@ export class PlayersDetailPage implements OnInit {
   lineChart: any;
 
   inputLabel = ['2019', '2018', '2017', '2016', '2015', '2014'];
-  inputData = [9.32, 7.61, 8.03, 7.58, 8.23, 7.17];
+  inputData = [9.3, 5.6, 6.0, 7, 8.2, 7.1];
 
   labelName = 'ฟอร์มการเล่นแต่ละฤดูกาล';
   img = 'assets/img/Prasit_Padungchok.jpg';

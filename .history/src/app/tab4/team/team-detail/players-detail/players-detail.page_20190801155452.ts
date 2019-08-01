@@ -11,8 +11,8 @@ export class PlayersDetailPage implements OnInit {
   @ViewChild('lineCanvas') lineCanvas;
   lineChart: any;
 
-  inputLabel = ['2019', '2018', '2017', '2016', '2015', '2014'];
-  inputData = [9.32, 7.61, 8.03, 7.58, 8.23, 7.17];
+  inputLabel = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'November', 'December'];
+  inputData = [9.3, 5.6, 6.0, 7, 8.2, 7.1, 4.5, 5.9, 5, 9.1, 7.8, 6.3];
 
   labelName = 'ฟอร์มการเล่นแต่ละฤดูกาล';
   img = 'assets/img/Prasit_Padungchok.jpg';

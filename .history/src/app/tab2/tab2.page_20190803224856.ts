@@ -18,7 +18,8 @@ export class Tab2Page {
               private service: AllService) {
     this.today = new Date().toISOString();
     this.leagueName = 'thaipremierleague';
-    this.readFixtures(this.leagueName, this.today);
+    this.emptyComponent = false;
+    this.setTeam();
   }
   onChangeLeague($event) {
     if ($event.target.value === 'premierleague') {
@@ -28,29 +29,19 @@ export class Tab2Page {
         this.leagueLogo = true;
         this.leagueName = 'thaipremierleague';
     }
-    this.readFixtures(this.leagueName, this.today);
   }
   onChangeDate() {
-    this.readFixtures(this.leagueName, this.today);
+    console.log(this.today);
   }
 
-  readFixtures(inputLeague , inputDate) {
-    this.emptyComponent = false;
-    // สร้าง Json
-    const objForm = {
-      league: inputLeague,
-      date: inputDate
-    };
-    const jsonForm = JSON.stringify(objForm);
-    // call service
-    this.service.postFixtures(jsonForm).subscribe((res: any) => {
-      this.teamObj = res;
-      // กรณีที่ไม่มีข้อมูลให้ พิมพ์ข้อความว่าไม่พบข้อมูลดังกล่าว
-      if (res.length === 0) {
-        this.emptyComponent = true;
-      }
-    }, err => {
-      this.emptyComponent = true;
-    });
+  setTeam() {
+    this.teamObj = [{
+      homeImg: 'assets/img/Muangthong-United.png',
+      homeTeam: 'เอสซีจี เมืองทอง ยูไนเต็ด',
+      homeScore: 0,
+      awayImg: 'assets/img/PT-Prachuap-FC.png',
+      awayTeam: 'พีที ประจวบ เอฟซี',
+      awayScore: 1
+    }];
   }
 }

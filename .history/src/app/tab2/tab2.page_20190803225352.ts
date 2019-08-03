@@ -18,6 +18,7 @@ export class Tab2Page {
               private service: AllService) {
     this.today = new Date().toISOString();
     this.leagueName = 'thaipremierleague';
+    this.emptyComponent = false;
     this.readFixtures(this.leagueName, this.today);
   }
   onChangeLeague($event) {

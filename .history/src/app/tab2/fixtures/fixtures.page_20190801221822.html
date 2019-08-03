@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="tab2" color="light"></ion-back-button><!--defaultHref="/tab2"-->
+    </ion-buttons>
+    <ion-title>สถิติฟอร์มของทีม</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="6">
+      <img src="{{homeImg}}" style="width: 25%;height: auto;margin-left: 58px;">
+    </ion-col>
+    <ion-col size="6">
+      <img src="{{awayImg}}" style="width: 25%;height: auto;margin-left: 58px;">
+    </ion-col>
+  </ion-row>
+  <ion-row >
+    <ion-col size="6">
+      <!--<ion-item-divider color="success">
+        <p style="margin-left: 52px;color: white;">9.5</p>
+      </ion-item-divider>-->
+      <ion-badge color="secondary" style="    margin-left: auto;
+      margin-right: auto;">9.5</ion-badge>
+    </ion-col>
+    <ion-col size="6">
+        <ion-badge color="secondary" >8.25</ion-badge>
+     <!--<ion-item-divider color="success">
+        <p style="margin-left: 52px;color: white;">8.25</p>
+      </ion-item-divider>--> 
+
+    </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col size="12">
+        <ion-item-divider color="light">
+          <h5 style="margin-left: 65px;">ผลการแข่งขันย้อนหลัง</h5>
+        </ion-item-divider>
+      </ion-col>
+    </ion-row>
+
+    <ion-list>
+    <ion-row>
+        <ion-col size="5">
+            <ion-label>
+                <p style="margin-left: 16px;">01-06-2561</p>
+              </ion-label>
+         
+        </ion-col>
+        <ion-col size="2" style="padding-top: 0px;">
+            <img src="{{homeImg}}" style="width: 60%;height: auto;">
+        </ion-col>
+        <ion-col size="3">
+            <ion-badge color="success">3 : 0</ion-badge>
+            <!--<ion-label>
+                <p style="margin-left: 15px;">3 : 0</p>
+              </ion-label>-->
+          </ion-col>
+          <ion-col size="2" style="padding-top: 0px;">
+              <img src="{{awayImg}}" style="width: 60%;height: auto;">
+          </ion-col>
+      </ion-row>
+
+      <ion-row>
+          <ion-col size="5">
+              <ion-label>
+                  <p style="margin-left: 16px;">29-07-2562</p>
+                </ion-label>
+          </ion-col>
+          <ion-col size="2" style="padding-top: 0px;">
+              <img src="{{awayImg}}" style="width: 60%;height: auto;">
+          </ion-col>
+          <ion-col size="3">
+              <ion-badge color="success">0 : 0</ion-badge>            
+              <!--<ion-label>
+                  <p style="margin-left: 15px;">0 : 0</p>
+                </ion-label>-->
+            </ion-col>
+            <ion-col size="2" style="padding-top: 0px;">
+                <img src="{{homeImg}}" style="width: 60%;height: auto;">
+            </ion-col>
+        </ion-row>
+    </ion-list>
+</ion-content>
